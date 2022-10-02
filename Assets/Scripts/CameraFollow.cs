@@ -21,7 +21,7 @@ public class CameraFollow : MonoBehaviour
     void LateUpdate()
     {
         // rotate on right click
-        if (allowRotate && Input.GetMouseButton(1)) {
+        if (allowRotate && Input.GetKey(KeyCode.R)) {
             Quaternion cameraTurnAngle = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * rotateSpeed, Vector3.up);
             offset = cameraTurnAngle * offset;
         }
