@@ -26,4 +26,21 @@ public class Player : MonoBehaviour
             }
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        print("hit something");
+        if (other.CompareTag("Key")) {
+            print("touched key");
+            PublicVars.keysCollected++;
+            Destroy(other.gameObject);
+        }
+
+        if (other.CompareTag("Door") && PublicVars.keysCollected > 0) {
+            print("touched door");
+            Destroy(other.gameObject);
+            // NavMeshManager.Instance.BakeNavMesh();
+            PublicVars.keysCollected--;
+        }
+    }
 }
