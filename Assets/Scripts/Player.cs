@@ -45,4 +45,13 @@ public class Player : MonoBehaviour
             newBomb.GetComponent<Rigidbody>().AddForce(transform.forward * bombThrow);
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        print("hit something");
+        if (other.CompareTag("Key")) {
+            PublicVars.keysCollected[PublicVars.currKeys++] = true;
+            Destroy(other.gameObject);
+        }
+    }
 }
