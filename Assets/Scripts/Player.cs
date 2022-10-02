@@ -31,16 +31,8 @@ public class Player : MonoBehaviour
     {
         print("hit something");
         if (other.CompareTag("Key")) {
-            print("touched key");
-            PublicVars.keysCollected++;
+            PublicVars.keysCollected[PublicVars.currKeys++] = true;
             Destroy(other.gameObject);
-        }
-
-        if (other.CompareTag("Door") && PublicVars.keysCollected > 0) {
-            print("touched door");
-            Destroy(other.gameObject);
-            // NavMeshManager.Instance.BakeNavMesh();
-            PublicVars.keysCollected--;
         }
     }
 }
