@@ -26,4 +26,13 @@ public class Player : MonoBehaviour
             }
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        print("hit something");
+        if (other.CompareTag("Key")) {
+            PublicVars.keysCollected[PublicVars.currKeys++] = true;
+            Destroy(other.gameObject);
+        }
+    }
 }
