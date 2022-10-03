@@ -24,25 +24,33 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // player move
         if(Input.GetMouseButtonDown(0)) {
             RaycastHit hit;
         
-            if (Physics.Raycast(main_cam.ScreenPointToRay(Input.mousePosition), out hit, 100)) {
+            if (Physics.Raycast(main_cam.ScreenPointToRay(Input.mousePosition), out hit, 150)) {
                 _agent.SetDestination(hit.point);
             }
         }
+        // player shoot bullet
         else if(Input.GetMouseButtonDown(1)) {
             RaycastHit hit;
-            if (Physics.Raycast(main_cam.ScreenPointToRay(Input.mousePosition), out hit, 100)) {
+            if (Physics.Raycast(main_cam.ScreenPointToRay(Input.mousePosition), out hit, 150)) {
                 transform.LookAt(hit.point);
                 GameObject newBullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
                 newBullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletForce);
             }
 
         }
+        // player throw bomb
         else if(Input.GetKeyDown("space")) {
-            GameObject newBomb = Instantiate(bombPrefab, transform.position, transform.rotation);
-            newBomb.GetComponent<Rigidbody>().AddForce(transform.forward * bombThrow);
+            RaycastHit hit;
+
+            if (Physics.Raycast(main_cam.ScreenPointToRay(Input.mousePosition), out hit, 150)) {
+                transform.LookAt(hit.point);
+                GameObject newBomb = Instantiate(bombPrefab, transform.position, transform.rotation);
+                newBomb.GetComponent<Rigidbody>().AddForce(transform.forward * bombThrow);
+            }
         }
     }
 
