@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
 
     public GameObject bombPrefab;
     int bombThrow = 750;
+    float bombSpawnDist = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -48,8 +49,12 @@ public class Player : MonoBehaviour
 
             if (Physics.Raycast(main_cam.ScreenPointToRay(Input.mousePosition), out hit, 150)) {
                 transform.LookAt(hit.point);
-                GameObject newBomb = Instantiate(bombPrefab, transform.position, transform.rotation);
-                newBomb.GetComponent<Rigidbody>().AddForce(transform.forward * bombThrow);
+
+                Vector3 playerPos = transform.position;
+                Vector3 playerDir = transform.forward;
+
+                GameObject newBomb = Instantiate(bombPrefab, playerPos + playerDir * bombSpawnDist, transform.rotation);
+                newBomb.GetComponent<Rigidbody>().AddForce(playerDir * bombThrow);
             }
         }
     }
