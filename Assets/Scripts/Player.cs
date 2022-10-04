@@ -15,11 +15,15 @@ public class Player : MonoBehaviour
     int bombThrow = 750;
     float bombSpawnDist = 1;
 
+    LevelManager levelManager;
+
     // Start is called before the first frame update
     void Start()
     {
         _agent = GetComponent<NavMeshAgent>();
         main_cam = Camera.main;
+
+        levelManager = GameObject.FindGameObjectWithTag("LevelManager").GetComponent<LevelManager>();
     }
 
     // Update is called once per frame
@@ -63,7 +67,10 @@ public class Player : MonoBehaviour
     {
         print("hit something");
         if (other.CompareTag("Key")) {
-            PublicVars.keysCollected[PublicVars.currKeys++] = true;
+            if (levelManager != null) {
+                levelManager.addKey();
+            }
+
             Destroy(other.gameObject);
         }
     }
