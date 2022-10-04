@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
+using TMPro;
 
 public class Player : MonoBehaviour
 {
@@ -9,15 +11,21 @@ public class Player : MonoBehaviour
     Camera main_cam;
 
     public GameObject bulletPrefab;
+    private Image healthBarImage;
     int bulletForce = 500;
 
     public GameObject bombPrefab;
     int bombThrow = 750;
     float bombSpawnDist = 1;
 
+    private const float health = 100;
+    public float healthRemaining;
+
     // Start is called before the first frame update
     void Start()
     {
+        healthRemaining = 100;
+        healthBarImage = GameObject.FindWithTag("HealthBar").GetComponent<Image>();
         _agent = GetComponent<NavMeshAgent>();
         main_cam = Camera.main;
     }
@@ -57,14 +65,23 @@ public class Player : MonoBehaviour
                 newBomb.GetComponent<Rigidbody>().AddForce(playerDir * bombThrow);
             }
         }
+
+        UpdateHealth();
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        print("hit something");
         if (other.CompareTag("Key")) {
             PublicVars.keysCollected[PublicVars.currKeys++] = true;
             Destroy(other.gameObject);
         }
+    }
+
+    public void DamagePlayer(float damage = 10.0f) {
+        healthRemaining -= damage;
+    }
+
+    public void UpdateHealth() {
+        healthBarImage.fillAmount = Mathf.Clamp(healthRemaining / health, 0, 1f);
     }
 }
