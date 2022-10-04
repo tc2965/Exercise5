@@ -8,6 +8,9 @@ TagManager:
   - PickUp
   - Key
   - Door
+  - Bullet
+  - Bomb
+  - Enemy
   layers:
   - Default
   - TransparentFX
