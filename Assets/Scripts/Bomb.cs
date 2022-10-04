@@ -5,7 +5,8 @@ using UnityEngine;
 public class Bomb : MonoBehaviour
 {
     public float delay = 3f;
-    public float radius = 5f;
+    public float bigRadius = 5f;
+    public float smallRadius = 2f;
     public float force = 1000f;
 
     public GameObject explosionEffect;
@@ -33,13 +34,21 @@ public class Bomb : MonoBehaviour
         Instantiate(explosionEffect, transform.position, transform.rotation);
 
         // get nearby objects
-        Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
+        Collider[] willMoveColliders = Physics.OverlapSphere(transform.position, bigRadius);
+        Collider[] willDieColliders = Physics.OverlapSphere(transform.position, smallRadius);
+
+        foreach (Collider nearbyObject in willDieColliders) {
+            Rigidbody rb = nearbyObject.GetComponent<Rigidbody>();
+            if (rb != null && nearbyObject.CompareTag("Enemy")) {
+                Destroy(nearbyObject.gameObject);
+            }
+        }
 
         //move nearby objects that aren't static (I THINK)
-        foreach (Collider nearbyObject in colliders) {
+        foreach (Collider nearbyObject in willMoveColliders) {
             Rigidbody rb = nearbyObject.GetComponent<Rigidbody>();
             if (rb != null) {
-                rb.AddExplosionForce(force, transform.position, radius);
+                rb.AddExplosionForce(force, transform.position, bigRadius);
             }
         }
     }
