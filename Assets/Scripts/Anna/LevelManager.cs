@@ -35,4 +35,11 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene("Level1");
     }
 
+    public void LoadNextLevel()
+    {
+        string currlevel = SceneManager.GetActiveScene().name;
+        int nextlevel = currlevel[currlevel.Length-1] - '0';
+        SceneManager.LoadScene("Level" + (++nextlevel).ToString());
+    }
+
 }

@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class DoorV2 : MonoBehaviour
 {
@@ -9,7 +8,7 @@ public class DoorV2 : MonoBehaviour
     public int doorCode;
     
     public bool triggerDoor = false; // option for door to load new scene
-    [SerializeField] private string nextLevel = "Level1"; // name of scene to load
+    // [SerializeField] private string nextLevel = "Level1"; // name of scene to load
 
     LevelManager levelManager;
 
@@ -30,7 +29,7 @@ public class DoorV2 : MonoBehaviour
             Debug.Log("hit player");
             
             if (triggerDoor) {
-                SceneManager.LoadScene(nextLevel);
+                levelManager.LoadNextLevel();
             }
             
             Destroy(gameObject);            
