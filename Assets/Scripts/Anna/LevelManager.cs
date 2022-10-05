@@ -27,19 +27,28 @@ public class LevelManager : MonoBehaviour
     }
 
     public void ResetLevel() {
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void LoadLevel1()
     {
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto); 
         SceneManager.LoadScene("Level1");
     }
 
     public void LoadNextLevel()
     {
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto); 
         string currlevel = SceneManager.GetActiveScene().name;
         int nextlevel = currlevel[currlevel.Length-1] - '0';
         SceneManager.LoadScene("Level" + (++nextlevel).ToString());
+    }
+
+    public void LoadMainMenu() 
+    {
+        SceneManager.LoadScene("StartScene");
+
     }
 
 }
