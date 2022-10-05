@@ -10,4 +10,13 @@ public class Lifespan : MonoBehaviour
     {
         Destroy(gameObject, lifeTime);
     }
+
+    void OnTriggerEnter(Collider other) {
+        Debug.Log("object collided with something");
+        
+        // remove bullet when it collides with non-player object
+        if (!other.CompareTag("Player")) {
+            Destroy(gameObject);
+        }
+    }
 }
