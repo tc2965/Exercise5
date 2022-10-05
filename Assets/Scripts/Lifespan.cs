@@ -5,6 +5,10 @@ using UnityEngine;
 public class Lifespan : MonoBehaviour
 {
     public float lifeTime = 1;
+    
+    public string[] tags;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,8 +18,8 @@ public class Lifespan : MonoBehaviour
     void OnTriggerEnter(Collider other) {
         Debug.Log("object collided with something");
         
-        // remove bullet when it collides with non-player object
-        if (!other.CompareTag("Player")) {
+        // remove bullet when it collides with non-player and non-key object
+        if (!other.CompareTag("Key")) {
             Destroy(gameObject);
         }
     }
