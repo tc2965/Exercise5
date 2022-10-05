@@ -10296,6 +10296,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1259430129050787621, guid: 0a709b42c69fbde46abd8965b44ac792,
         type: 3}
+      propertyPath: canShoot
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1259430129050787621, guid: 0a709b42c69fbde46abd8965b44ac792,
+        type: 3}
+      propertyPath: canThrowBomb
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1259430129050787621, guid: 0a709b42c69fbde46abd8965b44ac792,
+        type: 3}
       propertyPath: levelManager
       value: 
       objectReference: {fileID: 1778642992}
