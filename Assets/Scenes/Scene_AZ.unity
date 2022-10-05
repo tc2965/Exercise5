@@ -13103,6 +13103,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 1966479222228839903, guid: 8b701f6a5a0d14460809fca48b03b066,
+        type: 3}
+      propertyPath: attackRadius
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b701f6a5a0d14460809fca48b03b066, type: 3}
 --- !u!1001 &1142625384
@@ -19579,6 +19584,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1966479222228839903, guid: 8b701f6a5a0d14460809fca48b03b066,
+        type: 3}
+      propertyPath: attackRadius
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b701f6a5a0d14460809fca48b03b066, type: 3}

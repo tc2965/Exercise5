@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 4183103378433784205}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Destructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -135,6 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85af8322750694607ba182bff2293947, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackRadius: 20
 --- !u!54 &4183103378433784205
 Rigidbody:
   m_ObjectHideFlags: 0
