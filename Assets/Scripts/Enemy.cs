@@ -10,6 +10,8 @@ public class Enemy : MonoBehaviour
 
     public float attackRadius = 20f;
 
+    public float health = 100;
+
     void Start()
     {
         _agent = GetComponent<NavMeshAgent>();
@@ -39,6 +41,15 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         if(other.CompareTag("Bullet")) {
+            takeDamage();
+        }
+    }
+
+
+    public void takeDamage(float dmg = 10.0f) {
+        health -= dmg;
+
+        if (health <= 0) {
             Destroy(gameObject);
         }
     }
