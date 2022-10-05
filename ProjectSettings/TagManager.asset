@@ -12,6 +12,7 @@ TagManager:
   - Bomb
   - Enemy
   - HealthBar
+  - LevelManager
   layers:
   - Default
   - TransparentFX

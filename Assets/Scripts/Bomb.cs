@@ -7,7 +7,7 @@ public class Bomb : MonoBehaviour
     public float delay = 3f;
     public float bigRadius = 5f;
     public float smallRadius = 2f;
-    public float force = 1000f;
+    public float force = 50f;
 
     public GameObject explosionEffect;
 
@@ -39,7 +39,7 @@ public class Bomb : MonoBehaviour
 
         foreach (Collider nearbyObject in willDieColliders) {
             Rigidbody rb = nearbyObject.GetComponent<Rigidbody>();
-            if (rb != null && nearbyObject.CompareTag("Enemy")) {
+            if (rb != null && nearbyObject.CompareTag("Destructable")) {
                 Destroy(nearbyObject.gameObject);
             }
         }
@@ -47,7 +47,7 @@ public class Bomb : MonoBehaviour
         //move nearby objects that aren't static (I THINK)
         foreach (Collider nearbyObject in willMoveColliders) {
             Rigidbody rb = nearbyObject.GetComponent<Rigidbody>();
-            if (rb != null) {
+            if (rb != null && nearbyObject.CompareTag("Destructable")) {
                 rb.AddExplosionForce(force, transform.position, bigRadius);
             }
         }
