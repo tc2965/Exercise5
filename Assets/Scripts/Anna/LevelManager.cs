@@ -42,4 +42,10 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene("Level" + (++nextlevel).ToString());
     }
 
+    public void LoadMainMenu() 
+    {
+        SceneManager.LoadScene("StartScene");
+
+    }
+
 }
