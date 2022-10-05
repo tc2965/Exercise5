@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
 
     public GameObject bulletPrefab;
     int bulletForce = 500;
+    float bulletYHeight = 0;
 
     public GameObject bombPrefab;
     int bombThrow = 750;
@@ -42,8 +43,12 @@ public class Player : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(main_cam.ScreenPointToRay(Input.mousePosition), out hit, 150)) {
                 transform.LookAt(hit.point);
+
+                Vector3 playerDir = transform.forward;
+                playerDir.y = bulletYHeight;
+
                 GameObject newBullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
-                newBullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletForce);
+                newBullet.GetComponent<Rigidbody>().AddForce(playerDir * bulletForce);
             }
 
         }
