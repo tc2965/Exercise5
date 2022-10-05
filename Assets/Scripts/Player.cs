@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
 
     public GameObject bulletPrefab;
     int bulletForce = 500;
+    float bulletSpawnDist = 1;
     float bulletYHeight = 0;
 
     public GameObject bombPrefab;
@@ -63,10 +64,12 @@ public class Player : MonoBehaviour
             if (Physics.Raycast(main_cam.ScreenPointToRay(Input.mousePosition), out hit, 150)) {
                 transform.LookAt(hit.point);
 
+                Vector3 playerPos = transform.position;
                 Vector3 playerDir = transform.forward;
-                playerDir.y = bulletYHeight;
 
-                GameObject newBullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
+                GameObject newBullet = Instantiate(bulletPrefab, playerPos + playerDir * bulletSpawnDist, transform.rotation);
+
+                playerDir.y = bulletYHeight;
                 newBullet.GetComponent<Rigidbody>().AddForce(playerDir * bulletForce);
             }
 
