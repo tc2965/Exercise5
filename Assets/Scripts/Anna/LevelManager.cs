@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
@@ -23,4 +25,14 @@ public class LevelManager : MonoBehaviour
     public bool accessDoor(int door_code) {
         return keys_collected[door_code];
     }
+
+    public void ResetLevel() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void LoadLevel1()
+    {
+        SceneManager.LoadScene("Level1");
+    }
+
 }

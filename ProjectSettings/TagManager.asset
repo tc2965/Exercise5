@@ -11,6 +11,7 @@ TagManager:
   - Bullet
   - Bomb
   - Enemy
+  - HealthBar
   - LevelManager
   layers:
   - Default
