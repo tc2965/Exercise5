@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17940827, g: 0.22464359, b: 0.3063036, a: 1}
+  m_IndirectSpecularColor: {r: 0.1794083, g: 0.22464356, b: 0.30630332, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8343,19 +8343,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1947063038}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &660594961
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 660594957}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd54bd478885b4ae1a1dbcfcdab441db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doorCode: 0
 --- !u!65 &660594965
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8369,6 +8356,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3, y: 5, z: 2}
   m_Center: {x: -1, y: 0, z: 0}
+--- !u!114 &660594966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660594957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20a99523e15eb3f4886959ad048e89ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorCode: 0
+  triggerDoor: 0
+  nextLevel: 
 --- !u!1001 &668219742
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10940,7 +10942,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 609596903}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &903262140
+--- !u!114 &903262138
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10949,10 +10951,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 903262137}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd54bd478885b4ae1a1dbcfcdab441db, type: 3}
+  m_Script: {fileID: 11500000, guid: 20a99523e15eb3f4886959ad048e89ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   doorCode: 1
+  triggerDoor: 1
+  nextLevel: WinScene
 --- !u!1001 &918465085
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13981,6 +13985,51 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1205014468}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1222445959
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1222445961}
+  - component: {fileID: 1222445960}
+  m_Layer: 0
+  m_Name: LevelManager
+  m_TagString: LevelManager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1222445960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222445959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a88917dc6a6ab3f409a7df55e1957722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  num_keys: 2
+--- !u!4 &1222445961
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222445959}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.2575846, y: -7.278536, z: 36.35777}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1236548556
 GameObject:
   m_ObjectHideFlags: 0
