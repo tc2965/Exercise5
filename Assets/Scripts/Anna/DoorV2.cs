@@ -14,7 +14,13 @@ public class DoorV2 : MonoBehaviour
     LevelManager levelManager;
 
     void Start() {
-        levelManager = GameObject.FindGameObjectWithTag("LevelManager").GetComponent<LevelManager>();
+        // get level manager
+        GameObject levelManagerObj = GameObject.FindGameObjectWithTag("LevelManager");
+        if (levelManagerObj != null) {
+            levelManager = levelManagerObj.GetComponent<LevelManager>();
+        } else {
+            Debug.Log("LevelManager is null");
+        }
     }
 
     public void OnTriggerEnter(Collider other) {

@@ -24,7 +24,13 @@ public class Player : MonoBehaviour
         _agent = GetComponent<NavMeshAgent>();
         main_cam = Camera.main;
 
-        levelManager = GameObject.FindGameObjectWithTag("LevelManager").GetComponent<LevelManager>();
+        // get level manager
+        GameObject levelManagerObj = GameObject.FindGameObjectWithTag("LevelManager");
+        if (levelManagerObj != null) {
+            levelManager = levelManagerObj.GetComponent<LevelManager>();
+        } else {
+            Debug.Log("LevelManager is null");
+        }
     }
 
     // Update is called once per frame
