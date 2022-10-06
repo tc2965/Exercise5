@@ -109,7 +109,7 @@ NavMeshSettings:
     agentRadius: 0.5
     agentHeight: 2
     agentSlope: 45
-    agentClimb: 0.4
+    agentClimb: 0.45
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     minRegionArea: 2
@@ -12068,6 +12068,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 579389705}
     m_Modifications:
+    - target: {fileID: 1016632150848077794, guid: 710932c24bb9944259a6fc61d17e3cbe,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1572002433398864299, guid: 710932c24bb9944259a6fc61d17e3cbe,
         type: 3}
       propertyPath: m_Name
@@ -12077,6 +12082,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 3425565125682453945, guid: 710932c24bb9944259a6fc61d17e3cbe,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5637564672184955781, guid: 710932c24bb9944259a6fc61d17e3cbe,
         type: 3}
@@ -12132,6 +12142,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6517829099714055983, guid: 710932c24bb9944259a6fc61d17e3cbe,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 710932c24bb9944259a6fc61d17e3cbe, type: 3}
@@ -16263,12 +16278,12 @@ PrefabInstance:
     - target: {fileID: 6118449509822578695, guid: 1c858d45a6cb94f938ce0ff2e083c4e3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.31
+      value: -13.84
       objectReference: {fileID: 0}
     - target: {fileID: 6118449509822578695, guid: 1c858d45a6cb94f938ce0ff2e083c4e3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.49
+      value: 2.04
       objectReference: {fileID: 0}
     - target: {fileID: 6118449509822578695, guid: 1c858d45a6cb94f938ce0ff2e083c4e3,
         type: 3}
@@ -16325,7 +16340,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 482513055}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd5f47a963a6f4e6b8e5e92ffc3912ee, type: 3}
   m_Name: 
@@ -29106,17 +29121,17 @@ PrefabInstance:
     - target: {fileID: 2138361505289655386, guid: ac83cd5dabbe24236aeea27383c65224,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2138361505289655386, guid: ac83cd5dabbe24236aeea27383c65224,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2138361505289655386, guid: ac83cd5dabbe24236aeea27383c65224,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2138361505289655386, guid: ac83cd5dabbe24236aeea27383c65224,
         type: 3}
@@ -29126,7 +29141,7 @@ PrefabInstance:
     - target: {fileID: 2138361505289655386, guid: ac83cd5dabbe24236aeea27383c65224,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.93
+      value: 2.77
       objectReference: {fileID: 0}
     - target: {fileID: 2138361505289655386, guid: ac83cd5dabbe24236aeea27383c65224,
         type: 3}
@@ -29208,7 +29223,7 @@ NavMeshObstacle:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1705948848}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
   m_Extents: {x: 0.5, y: 0.5, z: 0.5}
@@ -29225,7 +29240,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1705948848}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}

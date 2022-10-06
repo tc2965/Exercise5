@@ -32,7 +32,6 @@ public class TrapDoorTrigger : MonoBehaviour
             activeTrapDoor = true;
             if (activeTrapDoor) {
                 spawnEnemies.SpawnEnemies();
-                Destroy(gameObject);
             }
         }
 

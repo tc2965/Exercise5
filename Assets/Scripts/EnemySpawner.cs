@@ -5,17 +5,20 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public GameObject enemyPrefab;
+    float spawnTimer = 2.0f; 
+    int enemiesSpawned = 0;
     public void SpawnEnemies()
     {
-        float spawnTimer = 2.0f; 
-        while (true) {
-            while (spawnTimer > 0.0f) {
-                spawnTimer -= Time.deltaTime;
-            }
+
+        StartCoroutine(spawnEnemies());
+    }
+    
+    private IEnumerator spawnEnemies() {
+        while (enemiesSpawned < 5) 
+        {
             Instantiate(enemyPrefab, transform.position,transform.rotation);
-            Instantiate(enemyPrefab, transform.position,transform.rotation);
-            spawnTimer = 5.0f;
+            enemiesSpawned++;
+            yield return new WaitForSeconds(spawnTimer);
         }
-        
     }
 }
