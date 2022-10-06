@@ -5,7 +5,7 @@ using UnityEngine;
 public class TrapDoorTrigger : MonoBehaviour
 {
     public GameObject trapDoor;
-    public bool activeTrapDoor;
+    private bool activeTrapDoor;
 
     EnemySpawner spawnEnemies;
 
@@ -28,11 +28,12 @@ public class TrapDoorTrigger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Player")) {
-            trapDoor.SetActive(true);
-            activeTrapDoor = true;
-            if (activeTrapDoor) {
+            if (!activeTrapDoor) {
+                trapDoor.SetActive(true);
+                activeTrapDoor = true;
                 spawnEnemies.SpawnEnemies();
             }
+
         }
 
         
