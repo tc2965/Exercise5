@@ -13,6 +13,9 @@ TagManager:
   - Enemy
   - HealthBar
   - LevelManager
+  - Destructable
+  - TrapDoor
+  - EnemySpawn
   layers:
   - Default
   - TransparentFX
