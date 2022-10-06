@@ -108,6 +108,10 @@ public class Player : MonoBehaviour
 
     public void DamagePlayer(float damage = 10.0f) {
         healthRemaining -= damage;
+
+        if (healthRemaining <= 0) {
+            levelManager.ResetLevel();
+        }
     }
 
     public void UpdateHealth() {
