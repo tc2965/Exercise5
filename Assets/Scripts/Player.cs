@@ -104,7 +104,7 @@ public class Player : MonoBehaviour
         if (other.CompareTag("Key")) {
             if (levelManager != null) {
                 levelManager.addKey();
-                displayPlayerDetails.UpdateScore(levelManager.getKeysCollected());
+                // displayPlayerDetails.UpdateScore(levelManager.getKeysCollected());
             }
 
             Destroy(other.gameObject);

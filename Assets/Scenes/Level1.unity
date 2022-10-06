@@ -2148,6 +2148,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Destructable
       objectReference: {fileID: 0}
+    - target: {fileID: 1956481795974667145, guid: ac83cd5dabbe24236aeea27383c65224,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2138361505289655386, guid: ac83cd5dabbe24236aeea27383c65224,
         type: 3}
       propertyPath: m_RootOrder
@@ -2269,7 +2274,7 @@ NavMeshObstacle:
   m_Shape: 1
   m_Extents: {x: 0.5, y: 0.5, z: 0.5}
   m_MoveThreshold: 0.1
-  m_Carve: 1
+  m_Carve: 0
   m_CarveOnlyStationary: 1
   m_Center: {x: 0.5, y: 0, z: 0}
   m_TimeToStationary: 0.5
@@ -9209,6 +9214,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Destructable
       objectReference: {fileID: 0}
+    - target: {fileID: 1956481795974667145, guid: ac83cd5dabbe24236aeea27383c65224,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2138361505289655386, guid: ac83cd5dabbe24236aeea27383c65224,
         type: 3}
       propertyPath: m_RootOrder
@@ -9330,7 +9340,7 @@ NavMeshObstacle:
   m_Shape: 1
   m_Extents: {x: 0.5, y: 0.5, z: 0.5}
   m_MoveThreshold: 0.1
-  m_Carve: 1
+  m_Carve: 0
   m_CarveOnlyStationary: 1
   m_Center: {x: 0.5, y: 0, z: 0}
   m_TimeToStationary: 0.5
@@ -9966,6 +9976,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Destructable
       objectReference: {fileID: 0}
+    - target: {fileID: 1956481795974667145, guid: ac83cd5dabbe24236aeea27383c65224,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2138361505289655386, guid: ac83cd5dabbe24236aeea27383c65224,
         type: 3}
       propertyPath: m_RootOrder
@@ -10087,7 +10102,7 @@ NavMeshObstacle:
   m_Shape: 1
   m_Extents: {x: 0.5, y: 0.5, z: 0.5}
   m_MoveThreshold: 0.1
-  m_Carve: 1
+  m_Carve: 0
   m_CarveOnlyStationary: 1
   m_Center: {x: 0.5, y: 0, z: 0}
   m_TimeToStationary: 0.5
@@ -16200,6 +16215,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Destructable
       objectReference: {fileID: 0}
+    - target: {fileID: 1956481795974667145, guid: ac83cd5dabbe24236aeea27383c65224,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2138361505289655386, guid: ac83cd5dabbe24236aeea27383c65224,
         type: 3}
       propertyPath: m_RootOrder
@@ -16321,7 +16341,7 @@ NavMeshObstacle:
   m_Shape: 1
   m_Extents: {x: 0.5, y: 0.5, z: 0.5}
   m_MoveThreshold: 0.1
-  m_Carve: 1
+  m_Carve: 0
   m_CarveOnlyStationary: 1
   m_Center: {x: 0.5, y: 0, z: 0}
   m_TimeToStationary: 0.5
@@ -17034,6 +17054,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Destructable
       objectReference: {fileID: 0}
+    - target: {fileID: 1956481795974667145, guid: ac83cd5dabbe24236aeea27383c65224,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2138361505289655386, guid: ac83cd5dabbe24236aeea27383c65224,
         type: 3}
       propertyPath: m_RootOrder
@@ -17155,7 +17180,7 @@ NavMeshObstacle:
   m_Shape: 1
   m_Extents: {x: 0.5, y: 0.5, z: 0.5}
   m_MoveThreshold: 0.1
-  m_Carve: 1
+  m_Carve: 0
   m_CarveOnlyStationary: 1
   m_Center: {x: 0.5, y: 0, z: 0}
   m_TimeToStationary: 0.5
@@ -18011,6 +18036,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Destructable
       objectReference: {fileID: 0}
+    - target: {fileID: 1956481795974667145, guid: ac83cd5dabbe24236aeea27383c65224,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2138361505289655386, guid: ac83cd5dabbe24236aeea27383c65224,
         type: 3}
       propertyPath: m_RootOrder
@@ -18132,7 +18162,7 @@ NavMeshObstacle:
   m_Shape: 1
   m_Extents: {x: 0.5, y: 0.5, z: 0.5}
   m_MoveThreshold: 0.1
-  m_Carve: 1
+  m_Carve: 0
   m_CarveOnlyStationary: 1
   m_Center: {x: 0.5, y: 0, z: 0}
   m_TimeToStationary: 0.5
@@ -18527,6 +18557,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Destructable
       objectReference: {fileID: 0}
+    - target: {fileID: 1956481795974667145, guid: ac83cd5dabbe24236aeea27383c65224,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2138361505289655386, guid: ac83cd5dabbe24236aeea27383c65224,
         type: 3}
       propertyPath: m_RootOrder
@@ -18642,7 +18677,7 @@ NavMeshObstacle:
   m_Shape: 1
   m_Extents: {x: 0.5, y: 0.5, z: 0.5}
   m_MoveThreshold: 0.1
-  m_Carve: 1
+  m_Carve: 0
   m_CarveOnlyStationary: 1
   m_Center: {x: 0.5, y: 0, z: 0}
   m_TimeToStationary: 0.5
@@ -20865,6 +20900,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Destructable
       objectReference: {fileID: 0}
+    - target: {fileID: 1956481795974667145, guid: ac83cd5dabbe24236aeea27383c65224,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2138361505289655386, guid: ac83cd5dabbe24236aeea27383c65224,
         type: 3}
       propertyPath: m_RootOrder
@@ -20986,7 +21026,7 @@ NavMeshObstacle:
   m_Shape: 1
   m_Extents: {x: 0.5, y: 0.5, z: 0.5}
   m_MoveThreshold: 0.1
-  m_Carve: 1
+  m_Carve: 0
   m_CarveOnlyStationary: 1
   m_Center: {x: 0.5, y: 0, z: 0}
   m_TimeToStationary: 0.5
@@ -23734,6 +23774,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Destructable
       objectReference: {fileID: 0}
+    - target: {fileID: 1956481795974667145, guid: ac83cd5dabbe24236aeea27383c65224,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2138361505289655386, guid: ac83cd5dabbe24236aeea27383c65224,
         type: 3}
       propertyPath: m_RootOrder
@@ -23855,7 +23900,7 @@ NavMeshObstacle:
   m_Shape: 1
   m_Extents: {x: 0.5, y: 0.5, z: 0.5}
   m_MoveThreshold: 0.1
-  m_Carve: 1
+  m_Carve: 0
   m_CarveOnlyStationary: 1
   m_Center: {x: 0.5, y: 0, z: 0}
   m_TimeToStationary: 0.5
