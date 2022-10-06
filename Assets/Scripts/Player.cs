@@ -100,9 +100,6 @@ public class Player : MonoBehaviour
             }
 
             Destroy(other.gameObject);
-        } else if (other.CompareTag("Enemy")){
-            DamagePlayer();
-            UpdateHealth();
         }
     }
 
