@@ -8,13 +8,13 @@ public class EnemySpawner : MonoBehaviour
     public void SpawnEnemies()
     {
         float spawnTimer = 2.0f; 
-        for (int i = 0; i < 2; i++) {
-            while (spawnTimer > 0) {
+        while (true) {
+            while (spawnTimer > 0.0f) {
                 spawnTimer -= Time.deltaTime;
             }
             Instantiate(enemyPrefab, transform.position,transform.rotation);
             Instantiate(enemyPrefab, transform.position,transform.rotation);
-            spawnTimer = 2.0f;
+            spawnTimer = 5.0f;
         }
         
     }
