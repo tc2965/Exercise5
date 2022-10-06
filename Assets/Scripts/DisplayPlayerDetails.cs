@@ -6,7 +6,6 @@ using TMPro;
 public class DisplayPlayerDetails : MonoBehaviour
 {
     public TextMeshProUGUI displayName;
-    public TextMeshProUGUI keys;
     LevelManager levelManager;
     PlayerDetails playerDetails;
     // Start is called before the first frame update
@@ -31,11 +30,5 @@ public class DisplayPlayerDetails : MonoBehaviour
 
 
         displayName.text = "Player: " + playerDetails.GetComponent<PlayerDetails>().getPlayerName();
-        keys.text = "Keys Collected: " + levelManager.getKeysCollected().ToString() + "/" + levelManager.totalKeys().ToString();
-    }
-
-    public void UpdateScore(int keyscollected) 
-    {
-        keys.text = "Keys Collected: " + keyscollected.ToString() + "/" + levelManager.totalKeys().ToString();
     }
 }
