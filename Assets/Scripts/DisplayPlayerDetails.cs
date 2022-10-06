@@ -34,4 +34,8 @@ public class DisplayPlayerDetails : MonoBehaviour
         keys.text = "Keys Collected: " + levelManager.getKeysCollected().ToString() + "/" + levelManager.totalKeys().ToString();
     }
 
+    public void UpdateScore(int keyscollected) 
+    {
+        keys.text = "Keys Collected: " + keyscollected.ToString() + "/" + levelManager.totalKeys().ToString();
+    }
 }

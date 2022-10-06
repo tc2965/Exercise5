@@ -19,6 +19,7 @@ TagManager:
   - PlayerName
   - KeysCollected
   - PlayerDetails
+  - DisplayPlayerDetails
   layers:
   - Default
   - TransparentFX

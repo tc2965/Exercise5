@@ -28,7 +28,7 @@ public class Player : MonoBehaviour
     private const float health = 100;
     private Image healthBarImage;
     LevelManager levelManager;
-
+    DisplayPlayerDetails displayPlayerDetails;
 
     // Start is called before the first frame update
     void Start()
@@ -44,6 +44,13 @@ public class Player : MonoBehaviour
             levelManager = levelManagerObj.GetComponent<LevelManager>();
         } else {
             Debug.Log("LevelManager is null");
+        }
+
+        GameObject displayPlayerDetailsMaybe = GameObject.FindGameObjectWithTag("DisplayPlayerDetails");
+        if (displayPlayerDetailsMaybe != null) {
+            displayPlayerDetails = displayPlayerDetailsMaybe.GetComponent<DisplayPlayerDetails>();
+        } else {
+            Debug.Log("displayPlayerDetailsMaybe is null");
         }
     }
 
@@ -97,6 +104,7 @@ public class Player : MonoBehaviour
         if (other.CompareTag("Key")) {
             if (levelManager != null) {
                 levelManager.addKey();
+                displayPlayerDetails.UpdateScore(levelManager.getKeysCollected());
             }
 
             Destroy(other.gameObject);
