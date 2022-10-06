@@ -6,16 +6,21 @@ using UnityEngine.AI;
 public class Enemy : MonoBehaviour
 {
     GameObject player;
+    Player playerScript;
     NavMeshAgent _agent;
 
     public float attackRadius = 20f;
 
     public float health = 100;
 
+    public float atkInterval = 2.0f;
+    Coroutine attacking;
+
     void Start()
     {
         _agent = GetComponent<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player");
+        playerScript = player.GetComponent<Player>();
         StartCoroutine(PlayerInRadius());
     }
 
@@ -42,6 +47,23 @@ public class Enemy : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         if(other.CompareTag("Bullet")) {
             takeDamage();
+        } else if (other.CompareTag("Player")) {
+            attacking = StartCoroutine(AttackPlayer());
+        }
+    }
+
+    void OnTriggerExit(Collider other) {
+        if (other.CompareTag("Player")) {
+            Debug.Log("Player exited");
+            StopCoroutine(attacking);
+        }
+    }
+
+    IEnumerator AttackPlayer() {
+        while (true) {
+            playerScript.DamagePlayer();
+            playerScript.UpdateHealth();
+            yield return new WaitForSeconds(atkInterval);
         }
     }
 
