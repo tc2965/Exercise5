@@ -225,7 +225,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1259430129050787623}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 2
@@ -265,7 +265,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75488359226e5084e9f2b05052939a3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canShoot: 1
+  canThrowBomb: 1
   bulletPrefab: {fileID: 8111855903087191360, guid: e91f4d1c8d739463b9c341876511b496,
     type: 3}
   bombPrefab: {fileID: 6290480560894174492, guid: 712fd998f00c14fd3942fd927a51cd4c,
     type: 3}
+  healthRemaining: 0
