@@ -26,6 +26,14 @@ public class LevelManager : MonoBehaviour
         return keys_collected[door_code];
     }
 
+    public int getKeysCollected() {
+        return curr_keys;
+    }
+
+    public int totalKeys() {
+        return num_keys;
+    }
+
     public void ResetLevel() {
         Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
