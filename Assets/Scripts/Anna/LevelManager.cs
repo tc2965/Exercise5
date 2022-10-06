@@ -50,13 +50,15 @@ public class LevelManager : MonoBehaviour
         Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto); 
         string currlevel = SceneManager.GetActiveScene().name;
         int nextlevel = currlevel[currlevel.Length-1] - '0';
+        if (nextlevel == 3) {
+            SceneManager.LoadScene("WinScene");
+        }
         SceneManager.LoadScene("Level" + (++nextlevel).ToString());
     }
 
     public void LoadMainMenu() 
     {
         SceneManager.LoadScene("StartScene");
-
     }
 
 }
