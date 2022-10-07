@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class PickupBomb : MonoBehaviour
 {
+    AudioSource audioSrc;
+    public AudioClip audioClip;
+
+    void Start() {
+        audioSrc = GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>();
+    }
+
     void OnTriggerEnter(Collider other) {
         Debug.Log("Gun collided with something");
 
@@ -12,6 +19,10 @@ public class PickupBomb : MonoBehaviour
 
             Player player = other.GetComponent<Player>();
             player.canThrowBomb = true;
+
+            if (audioSrc != null && audioClip != null) {
+                audioSrc.PlayOneShot(audioClip);
+            }
         }
 
         Destroy(gameObject);
