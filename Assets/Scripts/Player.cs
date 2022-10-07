@@ -30,6 +30,8 @@ public class Player : MonoBehaviour
     LevelManager levelManager;
     DisplayPlayerDetails displayPlayerDetails;
 
+    public AudioSource audioSrc;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -52,6 +54,9 @@ public class Player : MonoBehaviour
         } else {
             Debug.Log("displayPlayerDetailsMaybe is null");
         }
+
+        // get audio src
+        audioSrc = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame

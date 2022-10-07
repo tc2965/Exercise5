@@ -11,15 +11,24 @@ public class LevelManager : MonoBehaviour
 
     int curr_keys = 0;
 
+    AudioSource audioSrc;
+    public AudioClip audioClip; // for key pick up
+
     // Start is called before the first frame update
     void Start()
     {
         keys_collected = new bool[num_keys]; // will all be intialized to default bool (false)
+
+        audioSrc = GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>();
     }
 
     public void addKey() {
         keys_collected[curr_keys++] = true;
         print(curr_keys);
+
+        if (audioSrc != null && audioClip != null) {
+            audioSrc.PlayOneShot(audioClip);
+        }
     }
 
     public bool accessDoor(int door_code) {

@@ -9919,6 +9919,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   num_keys: 5
+  audioClip: {fileID: 8300000, guid: 114e0c49e57d53348bc50e012dc6bfdf, type: 3}
 --- !u!1001 &1133989651
 PrefabInstance:
   m_ObjectHideFlags: 0
