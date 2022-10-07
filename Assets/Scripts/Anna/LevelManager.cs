@@ -19,7 +19,10 @@ public class LevelManager : MonoBehaviour
     {
         keys_collected = new bool[num_keys]; // will all be intialized to default bool (false)
 
-        audioSrc = GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>();
+        GameObject player =  GameObject.FindGameObjectWithTag("Player");
+        if (player != null) {
+            audioSrc = player.GetComponent<AudioSource>();
+        }
     }
 
     public void addKey() {
